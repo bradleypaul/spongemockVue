@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="lodash.js"></script>
+    <script src="app.js"></script>
+    <style>
+        a {
+            font-weight: bold;
+            font: italic;
+            color: orangered;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <link rel="icon" href="http://iconsparadise.com/wp-content/uploads/2011/08/sponge_bob.png" />
+    <title>Spongemock Vue.js</title>
+</head>
+
+<body>
+    <div id="app" class="container">
+        <div class="row text-center">
+            <h3>Spongemock with
+                <a href="https://vuejs.org">Vue.js</a>
+                !
+            </h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-sm-12 form-group">
+                <input class="form-control text-center" type="text" v-model="mockText" placeholder="Enter text here to have it mocked below!"
+                    autofocus />
+            </div>
+        </div>
+        <br />
+        <div class="row text-center">
+            <div class="col-xs-12 form-group">
+                <input type="text" class="form-control text-center" v-model="mockedText" readonly />
+            </div>
+        </div>
+        <br />
+        <div class="row text-center">
+            <input type="button" @click="regenerate" value="Regenerate Spongemock" />
+        </div>
+        <hr/>
+        <div class="row text-center">
+            <a href="http://www.spongemock.me/">Click here</a>
+            for the original site!
+        </div>
+    </div>
+</body>
+
+</html>
