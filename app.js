@@ -15,6 +15,10 @@
             methods: {
                 regenerate: function () {
                     this.mockText = new String(this.mockText);
+                },
+                speak: function () {
+                    let utterance = new SpeechSynthesisUtterance(this.mockText);
+                    window.speechSynthesis.speak(utterance);
                 }
             }
         });
